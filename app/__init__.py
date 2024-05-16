@@ -9,8 +9,9 @@ app = Flask(__name__)
 login = LoginManager(app)
 
 app.secret_key = 'kfshafeoiuhfweiafhewuo12312@!78235217841'
-app.config['SQLALCHEMY_DATABASE_URI'] = str.format('mysql+pymysql://root:%s@localhost/hoteldb?charset=utf8mb4'
-                                                   % quote('123456'))
+# app.config['SQLALCHEMY_DATABASE_URI'] = str.format('mysql+pymysql://root:%s@localhost/hoteldb?charset=utf8mb4'
+#                                                    % quote('123456'))
+app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://admin:httclinic@flask-db.cle2w2q6enml.ap-southeast-2.rds.amazonaws.com/hoteldb?charset=utf8mb4"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['PAGE_SIZE'] = 4
 
